@@ -82,7 +82,7 @@ half4 CombinedShapeLightSharedTransparent(half4 color, half4 mask, half2 lightin
     finalOutput = _HDREmulationScale * (color * finalModulate + finalAdditve);
 #endif
 
-    if (finalOutput.x + finalOutput.y + finalOutput.z < 0.1)
+    if (finalOutput.x + finalOutput.y + finalOutput.z < 0.01)
     {
         finalOutput.a = 0.0;
     }

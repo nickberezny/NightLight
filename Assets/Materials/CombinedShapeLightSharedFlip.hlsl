@@ -84,9 +84,9 @@ half4 CombinedShapeLightSharedTransparent(half4 color, half4 mask, half2 lightin
 
     if (finalOutput.x + finalOutput.y + finalOutput.z > 0.0)
     {
-        finalOutput.x = 1 - finalOutput.x;
-        finalOutput.y = 1 - finalOutput.y;
-        finalOutput.z = 1 - finalOutput.z;
+        finalOutput.x = 1.0 - finalOutput.x;
+        finalOutput.y = 1.0 - finalOutput.y;
+        finalOutput.z = 1.0 - finalOutput.z;
         if(finalOutput.a > 0.0) finalOutput.a = -1.0 + ((finalOutput.x + finalOutput.y + finalOutput.z)/2.5);
     }
     else

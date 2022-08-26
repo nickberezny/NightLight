@@ -9,10 +9,18 @@ public class LightManager : MonoBehaviour
 
     [SerializeField] GameObject[] NightLights;
     [SerializeField] GameObject[] DayLights;
+    [SerializeField] Flashlight NightFlashlight;
+    [SerializeField] Flashlight DayFlashlight;
+
+    private void Start()
+    {
+        ChangeLighting(false);
+    }
 
     public void ChangeLighting(bool lit)
     {
         lighted = lit; 
+
 
         foreach(GameObject light in NightLights)
         {
@@ -23,5 +31,8 @@ public class LightManager : MonoBehaviour
         {
             light.SetActive(!lit);
         }
+
+        NightFlashlight.ChangeDayTime(lit);
+        DayFlashlight.ChangeDayTime(!lit);
     }
 }
