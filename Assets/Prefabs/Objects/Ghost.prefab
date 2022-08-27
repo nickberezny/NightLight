@@ -289,7 +289,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 400e20dd7fca5454bbd0423a129bbaec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  setpoints: []
+  setpoints:
+  - {fileID: 2172973469898213145}
+  - {fileID: 3126538774601646143}
   threshold: 0.2
   speed: 0.1
 --- !u!58 &143723161906815526

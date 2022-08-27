@@ -13,6 +13,7 @@ public class Flashlight : MonoBehaviour
     [SerializeField] private Animator anim;
     [SerializeField] private SpriteRenderer armRenderer;
     private StateManager stateManager;
+    private SFXManager sfx;
     private bool NightTime = true;
     private bool flashlightOn;
    
@@ -22,6 +23,8 @@ public class Flashlight : MonoBehaviour
     {
         player = transform.parent.transform;
         stateManager = FindObjectOfType<StateManager>();
+        sfx = FindObjectOfType<SFXManager>();
+
     }
 
     private void Start()
@@ -68,6 +71,7 @@ public class Flashlight : MonoBehaviour
 
             if (flashlightOn)
             {
+                sfx.PlayAudio("Click");
                 SetLights();
                 foreach(Atenna atenna in atennas)
                 {

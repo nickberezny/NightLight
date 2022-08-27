@@ -8,6 +8,7 @@ TagManager:
   - Switch
   - Ghost
   - Door
+  - Death
   layers:
   - Default
   - TransparentFX
